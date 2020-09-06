@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4"><button style="background-color: crimson;"><span style="font-weight: 1.5em;color:white;" (click)="closeObservation()">X</span></button></ion-col>
+        <ion-col><ion-title translate="yes">Observation</ion-title></ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  </ion-toolbar>
+  <div class="alertBox" id="comment_alert" style="background-color:red;" hidden>
+    <ion-button (click)="closeCommentAlertBox()"><span class="closeBtn" >&times;</span></ion-button><br/>
+    <p><strong><span id="commentErrorDialog" style="color: black" translate="yes"></span></strong></p>
+   </div>
+</ion-header>
+
+<ion-content>
+<label for="pageNumber" translate="yes">Page Number:<input type="text" name="pageNumber" id="pageNumber" placeholder="e.g. Page 3" translate="yes" required/> </label>
+<br/>
+<label translate="yes">Comment:</label><br/><textarea type="text" name="observation" id="observation" translate="yes" rows="5" cols="25" required>e.g. Error with column 2</textarea>
+<ion-grid>
+  <ion-row style="text-align: center;">
+    <button class="btn btn-lg" style="background-color:blueviolet;color:white;" translate="yes" (click)="postComment()" id="btnPost"><span class="glyphicon glyphicon-ok"></span>Post</button>
+  </ion-row>
+</ion-grid>
+</ion-content>

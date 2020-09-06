@@ -1,0 +1,8 @@
+{
+  "name": "marvelApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
